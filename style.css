@@ -22,6 +22,21 @@ nav ul {
   color: #252525;
 }
 
+@keyframes omniBlinkAnimation {
+  from {
+    color: #c4c4c4;
+  }
+  to {
+    color: #252525;
+  }
+}
+
+.animation {
+  animation-name: omniBlinkAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: 100;
+}
+
 .container {
   border: 0.5rem solid #c4c4c4;
   height: 100vh;
