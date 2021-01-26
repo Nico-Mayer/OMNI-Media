@@ -12,10 +12,10 @@ html {
 }
 
 nav ul {
-  border: 0.2rem solid #252525;
+  border: 0.15rem solid #252525;
   display: flex;
   padding: 1 rem;
-  min-height: 6vh;
+  height: 45px;
   background-color: #c4c4c4;
   justify-content: center;
   align-items: center;
@@ -32,6 +32,46 @@ nav ul {
     color: #252525;
   }
 }
+/* HAMBURGER MENU CONTENT */
+.nav-bar {
+  width: 300px;
+  height: 20%;
+  background-color: #c4c4c4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.open_menu {
+  position: relative;
+  visibility: visible;
+}
+.nav-list {
+  text-align: right;
+}
+.nav-item {
+  list-style: none;
+  margin: 10px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.image_container {
+  background-image: url(hero.jpg);
+  margin: 0.2rem;
+  border: 0.1rem solid #252525;
+
+  height: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
 .animation {
   cursor: pointer;
@@ -40,7 +80,7 @@ nav ul {
   text-align: center;
   font-weight: 700;
   font-style: bold;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   animation-name: omniBlinkAnimation;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -48,7 +88,7 @@ nav ul {
 
 .buttonContainer {
   flex-grow: 1;
-  margin-left: 1rem;
+  margin-left: 0.3rem;
   /*background-color: aqua;*/
 }
 
@@ -65,7 +105,9 @@ nav ul {
 }
 
 .sectionContainer {
-  border: 0.2rem solid #252525;
+  border-bottom: 0.15rem solid #252525;
+  border-left: 0.15rem solid #252525;
+  border-right: 0.15rem solid #252525;
   height: 100%;
 }
 
@@ -120,24 +162,24 @@ nav ul {
 
 .menu-btn {
   /*background-color: #8b4af3;*/
-  border: 1px double black;
-
-  padding-left: 0.9rem;
+  border-style: double;
+  background-color: white;
+  padding-left: 0.25rem;
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   /* border: 3px solid #fff; */
 }
 .menu-btn__burger {
-  width: 40px;
-  height: 6px;
+  width: 25px;
+  height: 2px;
   background: #252525;
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
 }
@@ -145,18 +187,18 @@ nav ul {
 .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 6px;
+  width: 25px;
+  height: 2px;
   background: #252522;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-5px);
 }
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(5px);
 }
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
