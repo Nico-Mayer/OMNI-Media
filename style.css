@@ -6,12 +6,13 @@
 
 html {
   font-size: 62.5%;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 nav ul {
   display: flex;
   padding: 1 rem;
-  min-height: 10vh;
+  min-height: 6vh;
   background-color: #c4c4c4;
   justify-content: space-around;
   align-items: center;
