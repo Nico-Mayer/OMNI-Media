@@ -11,6 +11,10 @@ html {
   font-style: normal;
 }
 
+nav {
+  position: sticky;
+}
+
 nav ul {
   border: 0.15rem solid #252525;
   display: flex;
@@ -36,7 +40,6 @@ nav ul {
 .animation {
   cursor: pointer;
   font-family: "IBM Plex Mono";
-
   font-weight: 700;
   font-style: bold;
   font-size: 4.2rem;
@@ -52,5 +55,5 @@ nav ul {
 
 .sectionContainer {
   border: 0.15rem solid #252525;
-  height: 93vh;
+  height: 91.5vh;
 }
