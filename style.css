@@ -11,17 +11,13 @@ html {
   font-style: normal;
 }
 
-nav {
-  position: sticky;
-}
-
 nav ul {
   border: 0.2rem solid #252525;
   display: flex;
   padding: 1 rem;
   min-height: 6vh;
   background-color: #c4c4c4;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   font-size: 2rem;
   list-style: none;
@@ -39,6 +35,7 @@ nav ul {
 
 .animation {
   cursor: pointer;
+  flex-grow: 1;
   font-family: "IBM Plex Mono";
   font-weight: 700;
   font-style: bold;
@@ -112,6 +109,7 @@ nav ul {
   position: relative;
   display: flex;
   justify-content: center;
+  flex-grow: 1;
   align-items: center;
   width: 80px;
   height: 80px;
