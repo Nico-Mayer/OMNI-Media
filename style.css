@@ -17,7 +17,7 @@ nav ul {
   padding: 1 rem;
   min-height: 6vh;
   background-color: #c4c4c4;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   font-size: 2rem;
   list-style: none;
@@ -33,10 +33,14 @@ nav ul {
   }
 }
 
+.widthForHeader {
+  flex-grow: 1;
+}
+
 .animation {
   cursor: pointer;
-  flex-grow: 1;
   font-family: "IBM Plex Mono";
+  flex-grow: 1;
   font-weight: 700;
   font-style: bold;
   font-size: 4.2rem;
@@ -109,8 +113,8 @@ nav ul {
   position: relative;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
   align-items: center;
+
   width: 80px;
   height: 80px;
   cursor: pointer;
