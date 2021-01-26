@@ -10,6 +10,7 @@ html {
 }
 
 nav ul {
+  border: 0.15rem solid #252525;
   display: flex;
   padding: 1 rem;
   min-height: 6vh;
