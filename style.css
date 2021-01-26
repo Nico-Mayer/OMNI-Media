@@ -16,7 +16,7 @@ nav {
 }
 
 nav ul {
-  border: 0.15rem solid #252525;
+  border: 0.2rem solid #252525;
   display: flex;
   padding: 1 rem;
   min-height: 6vh;
@@ -49,16 +49,64 @@ nav ul {
 }
 
 .container {
-  border: 0.5rem solid #c4c4c4;
+  border: 0.8rem solid #c4c4c4;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .sectionContainer {
-  border: 2px solid #252525;
+  border: 0.2rem solid #252525;
   height: 100%;
 }
+
+@keyframes moveBox1 {
+  0% {
+    left: 50%;
+    top: 50%;
+  }
+  25% {
+    left: 55%;
+    top: 50%;
+  }
+  50% {
+    left: 55%;
+    top: 55%;
+  }
+  75% {
+    left: 50%;
+    top: 55%;
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.load {
+  color: #8b4af3;
+  position: absolute;
+  font-size: 2rem;
+}
+
+.box1 {
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: white;
+  animation: moveBox1 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ++++++++++++MENU BUTTON ++++++++++++*/
 
 .menu-btn {
   position: relative;
