@@ -51,9 +51,11 @@ nav ul {
 .container {
   border: 0.5rem solid #c4c4c4;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionContainer {
-  border: 0.15rem solid #252525;
-  height: 91.5vh;
+  border: 2px solid #252525;
+  height: 100%;
 }
