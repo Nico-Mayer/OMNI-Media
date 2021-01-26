@@ -34,13 +34,15 @@ nav ul {
 }
 
 .animation {
+  cursor: pointer;
   font-family: "IBM Plex Mono";
+
   font-weight: 700;
   font-style: bold;
   font-size: 4.2rem;
   animation-name: omniBlinkAnimation;
   animation-duration: 1s;
-  animation-iteration-count: 100;
+  animation-iteration-count: infinite;
 }
 
 .container {
