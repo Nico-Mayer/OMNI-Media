@@ -19,3 +19,8 @@ nav ul {
   font-size: 2rem;
   list-style: none;
 }
+
+.container {
+  border: 7px solid #c4c4c4;
+  height: 100vh;
+}
