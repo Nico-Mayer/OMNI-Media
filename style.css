@@ -16,6 +16,7 @@ nav ul {
   display: flex;
   padding: 1 rem;
   min-height: 6vh;
+  max-height: 6vh;
   background-color: #c4c4c4;
   justify-content: center;
   align-items: center;
@@ -48,6 +49,7 @@ nav ul {
 
 .buttonContainer {
   flex-grow: 1;
+  margin-left: 1rem;
   /*background-color: aqua;*/
 }
 
@@ -118,20 +120,21 @@ nav ul {
 
 .menu-btn {
   /*background-color: #8b4af3;*/
-  border: 3px solid black;
+  border: 1px double black;
+
+  padding-left: 0.9rem;
   position: relative;
   display: flex;
-  padding-left: 1rem;
   justify-content: flex-start;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   /* border: 3px solid #fff; */
 }
 .menu-btn__burger {
-  width: 50px;
+  width: 40px;
   height: 6px;
   background: #252525;
   border-radius: 5px;
@@ -142,7 +145,7 @@ nav ul {
 .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 40px;
   height: 6px;
   background: #252522;
   border-radius: 5px;
