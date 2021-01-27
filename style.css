@@ -157,9 +157,12 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
-  text-align: center;
-
-  border: 2px solid #252525;
+  text-align: left;
+  border: 1px solid #252525;
+}
+.box1 h1 {
+  font-family: "IBM Plex Mono";
+  font-weight: 300;
 }
 
 /* .load {
