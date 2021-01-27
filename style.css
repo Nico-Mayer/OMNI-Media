@@ -109,6 +109,8 @@ nav ul {
   border-left: 0.15rem solid #252525;
   border-right: 0.15rem solid #252525;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .boxContainer {
@@ -116,6 +118,15 @@ nav ul {
   align-items: center;
   justify-content: space-evenly;
 }
+
+.textSection {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
 .box1 {
   cursor: pointer;
   width: 13rem;
