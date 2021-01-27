@@ -119,13 +119,15 @@ nav ul {
   cursor: pointer;
   width: 13rem;
   height: 8rem;
-  border-radius: 10px;
+  margin-top: 1rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   text-align: center;
+
+  border: 2px solid #252525;
 }
 
 /* .load {
