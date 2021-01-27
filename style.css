@@ -13,8 +13,11 @@ html {
 
 nav {
   border: 0.15rem solid #252525;
+  position: fixed;
+  top: 0;
   display: flex;
   padding: 1 rem;
+  width: 100%;
   height: 45px;
   background-color: #c4c4c4;
   /*justify-content: center;*/
@@ -31,6 +34,7 @@ nav {
     color: #252525;
   }
 }
+
 /* HAMBURGER MENU CONTENT */
 .nav-bar {
   width: 250px;
@@ -39,7 +43,7 @@ nav {
   border: 1px solid #252525;
   padding: 3px;
   position: fixed;
-  top: 54px;
+  top: 45px;
   left: 10px;
   display: flex;
   justify-content: center;
@@ -48,7 +52,7 @@ nav {
   flex-direction: column;
 }
 .open_menu {
-  position: absolute;
+  position: fixed;
   visibility: visible;
 }
 
@@ -89,7 +93,6 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .animation {
