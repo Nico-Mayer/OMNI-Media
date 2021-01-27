@@ -30,7 +30,7 @@
 } */
 
 .menu-btn__burger {
-  width: 25px;
+  width: 20px;
   height: 2px;
   background: #252525;
   border-radius: 1px;
@@ -41,7 +41,7 @@
 .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 20px;
   height: 2px;
   background: #252522;
   border-radius: 3px;
