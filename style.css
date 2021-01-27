@@ -111,7 +111,25 @@ nav ul {
   height: 100%;
 }
 
-@keyframes moveBox1 {
+.box1 {
+  cursor: pointer;
+  width: 15rem;
+  height: 10rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.box1:hover {
+  box-shadow: 0 1.9rem 3.8rem rgba(123, 47, 223, 0.3),
+    0 1.5rem 1.2rem rgba(124, 10, 218, 0.22);
+  transform: translate(0, -1rem);
+}
+
+/* @keyframes moveBox1 {
   0% {
     left: 50%;
     top: 50%;
@@ -132,15 +150,15 @@ nav ul {
     left: 50%;
     top: 50%;
   }
-}
+} */
 
-.load {
+/* .load {
   color: #8b4af3;
   position: absolute;
   font-size: 2rem;
-}
+} */
 
-.box1 {
+/* .box1 {
   width: 5rem;
   height: 5rem;
   top: 50%;
@@ -148,7 +166,7 @@ nav ul {
   transform: translate(-50%, -50%);
   position: absolute;
   text-align: center;
-  background-color: white;
+  background-color: transparent;
   animation: moveBox1 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -156,7 +174,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* ++++++++++++MENU BUTTON ++++++++++++*/
 
