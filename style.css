@@ -34,8 +34,8 @@ nav ul {
 }
 /* HAMBURGER MENU CONTENT */
 .nav-bar {
-  width: 150px;
-  height: 20%;
+  width: 250px;
+  height: 250px;
   background-color: #c4c4c4;
   border-style: double;
   position: fixed;
@@ -43,21 +43,23 @@ nav ul {
   left: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   visibility: hidden;
+  flex-direction: column;
 }
 .open_menu {
   position: absolute;
   visibility: visible;
 }
-.nav-list {
-  text-align: right;
-}
-.nav-item {
-  list-style: none;
-  margin: 10px;
-}
+
 .nav-link {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #252525;
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+
   text-decoration: none;
   font-size: 15px;
 }
