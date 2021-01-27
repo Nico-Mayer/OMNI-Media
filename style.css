@@ -110,11 +110,15 @@ nav ul {
   border-right: 0.15rem solid #252525;
   height: 100%;
 }
-
+.boxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .box1 {
   cursor: pointer;
-  width: 15rem;
-  height: 10rem;
+  width: 13rem;
+  height: 8rem;
   border-radius: 10px;
   text-align: center;
   display: flex;
