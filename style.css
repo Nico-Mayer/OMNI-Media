@@ -27,6 +27,14 @@ nav {
   color: #252525;
 }
 
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 .headElement {
   background-color: #c4c4c4;
   width: 100%;
@@ -189,6 +197,7 @@ nav {
   border-right: 0.8rem solid #c4c4c4;
   border-bottom: 0.8rem solid #c4c4c4;
   height: 150vh;
+  background-color: white;
 
   display: flex;
   flex-direction: column;
