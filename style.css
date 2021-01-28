@@ -31,10 +31,6 @@ nav {
   filter: invert(1) hue-rotate(180deg);
 }
 
-.invert {
-  filter: invert(1) hue-rotate(180deg);
-}
-
 .headElement {
   background-color: #c4c4c4;
   width: 100%;
