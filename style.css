@@ -32,7 +32,7 @@ nav {
 }
 
 .footerContainer {
-  height: 8%;
+  height: 4%;
   border-bottom: 1px solid #252525;
   border-left: 1px solid #252525;
   border-right: 1px solid #252525;
@@ -62,18 +62,17 @@ nav {
 
 /* NIGHT MODE BUTTON*/
 .toggle-container {
-  background-color: white;
+  background-color: #252525;
   border: 0.5px solid #252525;
-  padding-left: 3px;
   display: flex;
-  width: 50px;
-  height: 24px;
+  width: 40px;
+  height: 16px;
   align-items: center;
 }
 .dark-mode-btn {
   width: 20px;
   height: 20px;
-  padding-left: 0.18rem;
+  padding-left: 0.28rem;
   border-style: double;
   background-color: white;
   position: relative;
