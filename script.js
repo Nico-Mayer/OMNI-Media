@@ -9,8 +9,10 @@ document.onkeypress = function(e){
 
 
 };
-
-
+const darkModeBtn = document.querySelector('.dark-mode-btn');
+darkModeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark-mode');
+});
 
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
