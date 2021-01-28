@@ -6,7 +6,11 @@ document.onkeypress = function(e){
     document.documentElement.classList.toggle('dark-mode');
 
   }
-}
+
+
+};
+
+
 
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;

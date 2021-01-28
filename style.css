@@ -31,6 +31,96 @@ nav {
   filter: invert(1) hue-rotate(180deg);
 }
 
+.footerContainer {
+  height: 8%;
+  border-bottom: 1px solid #252525;
+  border-left: 1px solid #252525;
+  border-right: 1px solid #252525;
+  background-color: #c4c4c4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.sectionA {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sectionB {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4rem;
+}
+
+/* NIGHT MODE BUTTON*/
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #252525;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/* END NIGHT MODE BUTTON */
+
+.footerSectionOne {
+}
+
+.footerSectionTwo {
+}
+
+.footerSectionThree {
+}
+
 .headElement {
   background-color: #c4c4c4;
   width: 100%;
@@ -199,7 +289,7 @@ nav {
   flex-direction: column;
 }
 .sectionContainer {
-  border-bottom: 1px solid #252525;
+  /*border-bottom: 1px solid #252525;*/
   border-left: 1px solid #252525;
   border-right: 1px solid #252525;
   height: 100%;
