@@ -32,7 +32,7 @@ nav {
 }
 
 .footerContainer {
-  height: 4%;
+  min-height: 10vh;
   border-bottom: 1px solid #252525;
   border-left: 1px solid #252525;
   border-right: 1px solid #252525;
@@ -47,6 +47,9 @@ nav {
   width: 50%;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
