@@ -39,11 +39,13 @@ nav {
 
 .buttonContainer {
   flex-grow: 1;
+  width: 15%;
   margin-left: 0.3rem;
 }
 
 .socialMediaHeader {
   flex-grow: 1;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
