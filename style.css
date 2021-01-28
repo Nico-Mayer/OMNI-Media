@@ -1,3 +1,7 @@
+@font-face {
+  src: url(fonts/AquireBold-8Ma60.otf);
+  font-family: aquire-bold;
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +36,7 @@ nav {
 }
 
 .footerContainer {
-  height: 4%;
+  height: 3%;
   border-bottom: 1px solid #252525;
   border-left: 1px solid #252525;
   border-right: 1px solid #252525;
@@ -223,21 +227,23 @@ nav {
 /* OMNI HEADER FONT + ANIMATION */
 .animation {
   cursor: pointer;
-  font-family: "IBM Plex Mono";
+  font-family: aquire-bold;
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-style: bold;
-  font-size: 3.3rem;
+  font-size: 3.5rem;
+  padding-bottom: 0.4rem;
 }
 
 .animation h1 {
   border-right: 7px solid #252525;
+  text-shadow: 2px 2px 10px 10px black;
   line-height: 40px;
 
-  animation: typist 2s steps(4), caret 0.7s infinite step-end;
+  animation: typist 2s steps(4), caret 0.8s infinite step-end;
   white-space: nowrap;
   overflow: hidden;
 }
