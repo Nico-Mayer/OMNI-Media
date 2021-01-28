@@ -191,6 +191,7 @@ nav {
   }
   .menu-btn-social-media {
     margin: 5px;
+    padding: 5px;
     border-style: double;
     background-color: white;
     position: relative;
@@ -204,17 +205,56 @@ nav {
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
+  .menu-btn-social-media:hover {
+    box-shadow: 2px 2px #252525;
+  }
 
   .menu-btn-social-media img {
     width: 100%;
     height: 100%;
   }
+  .social-nav-bar {
+    width: 45;
+    height: 14rem;
+    background-color: #c4c4c4;
+    border: 1px solid #252525;
+    position: fixed;
+    top: 53px;
+    right: 10px;
+    visibility: hidden;
+  }
+  .social-nav-bar img {
+    width: 100%;
+    height: 100%;
+  }
+  .social-nav-bar a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .open-social-bar {
+    position: fixed;
+    visibility: visible;
+  }
+  .menu-btn-social-inside-bar {
+    margin: 5px;
+    border-style: double;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    height: 38px;
+    cursor: pointer;
+  }
 }
 
 /* HAMBURGER MENU CONTENT */
 .nav-bar {
-  width: 250px;
-  height: 250px;
+  width: 20rem;
+  height: 20rem;
   background-color: #c4c4c4;
   border: 1px solid #252525;
   padding: 3px;

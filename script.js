@@ -1,3 +1,6 @@
+
+///////////////* DARK MODE TOGGL */////////////////
+
 let darkMode = localStorage.getItem('darkMode');
 let togglActive = localStorage.getItem('togglActive');
 const darkModeBtn = document.querySelector('.dark-mode-btn');
@@ -26,6 +29,8 @@ darkModeBtn.addEventListener('click', () => {
   }
 });
 
+///////////////* MENU BUTTON LINKS */////////////////
+
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 const navbar = document.querySelector('.nav-bar');
@@ -39,4 +44,20 @@ menuBtn.addEventListener('click', () => {
     navbar.classList.remove('open_menu');
     menuOpen = false;
   }
+});
+
+///////////////* BUTTON SOCIAL MEDIA */////////////////
+
+const socailMenuBtn = document.querySelector('.menu-btn-social-media');
+let socialNavBarOpen = false;
+const socialNavBar = document.querySelector('.social-nav-bar');
+socailMenuBtn.addEventListener('click', () => {
+  if(!socialNavBarOpen) {
+    socialNavBar.classList.add('open-social-bar');
+    socialNavBarOpen = true;
+  } else {
+    socialNavBar.classList.remove('open-social-bar');
+    socialNavBarOpen = false;
+  }
+  
 });
