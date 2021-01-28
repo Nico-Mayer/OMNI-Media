@@ -1,17 +1,26 @@
-document.onkeypress = function(e){
-
-  e = e || window.event;
-
-  if(e.keyCode === 13){
-    document.documentElement.classList.toggle('dark-mode');
-
-  }
-
-
-};
+let darkMode = localStorage.getItem('darkMode')
 const darkModeBtn = document.querySelector('.dark-mode-btn');
+
+const enableDarkMode = ()=>{
+  document.documentElement.classList.add('dark-mode');
+  localStorage.setItem('darkMode', 'enabled');
+};
+const disableDarkMode = ()=>{
+  document.documentElement.classList.remove('dark-mode');
+  localStorage.setItem('darkMode', null);
+};
+if(darkMode == 'enabled'){
+  enableDarkMode();
+};
+
 darkModeBtn.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark-mode');
+  darkMode = localStorage.getItem('darkMode');
+  if(darkMode != 'enabled'){
+    enableDarkMode();
+  }
+  else{
+    disableDarkMode();
+  }
 });
 
 const menuBtn = document.querySelector('.menu-btn');
