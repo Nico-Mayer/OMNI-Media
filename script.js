@@ -1,12 +1,15 @@
-let darkMode = localStorage.getItem('darkMode')
+let darkMode = localStorage.getItem('darkMode');
+let togglActive = localStorage.getItem('togglActive');
 const darkModeBtn = document.querySelector('.dark-mode-btn');
 
 const enableDarkMode = ()=>{
   document.documentElement.classList.add('dark-mode');
+  darkModeBtn.classList.add('active');
   localStorage.setItem('darkMode', 'enabled');
 };
 const disableDarkMode = ()=>{
   document.documentElement.classList.remove('dark-mode');
+  darkModeBtn.classList.remove('active');
   localStorage.setItem('darkMode', null);
 };
 if(darkMode == 'enabled'){
