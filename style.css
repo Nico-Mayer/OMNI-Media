@@ -44,8 +44,32 @@ nav {
 
 .socialMediaHeader {
   flex-grow: 1;
-  text-align: center;
-  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  visibility: visible;
+}
+.socialMediaHeader img {
+  width: 100%;
+  height: 100%;
+}
+.menu-btn-social {
+  /*background-color: #8b4af3;*/
+  margin: 5px;
+  border-style: double;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn-social:hover {
+  box-shadow: 2px 2px #252525;
 }
 
 /* HAMBURGER MENU CONTENT */
@@ -102,7 +126,7 @@ nav {
 .animation {
   cursor: pointer;
   font-family: "IBM Plex Mono";
-  flex-grow: 2;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
