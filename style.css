@@ -338,13 +338,50 @@ html {
 /****************************** HEADER END ********************************/
 
 /* HERO IMAGE */
-.hero-img {
+/* .hero-img {
   max-width: 100%;
   height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid black;
+  border: 1px solid black; */
+/* } */
+
+.loading-div {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  position: relative;
+}
+
+.loading::before {
+  content: "loading..";
+  color: #782bf3;
+  position: absolute;
+  overflow: hidden;
+  border-right: 0.4rem solid #782bf3;
+  animation: animateLoading 3s linear infinite;
+}
+
+@keyframes animateLoading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
 }
 
 /* END HERO */
@@ -352,7 +389,6 @@ html {
 /* TEXT - WINDOWS section*/
 
 .container1 {
-  min-height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -413,8 +449,8 @@ html {
   box-sizing: border-box;
   background-color: black;
   min-height: auto;
-  font-size: 2rem;
   display: flex;
+  font-size: 2rem;
   justify-content: flex-start;
   padding: 1rem;
   padding-top: 3rem;
