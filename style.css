@@ -348,7 +348,7 @@ html {
 /* } */
 
 .loading-div {
-  height: 50vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,7 +367,7 @@ html {
   color: transparent;
   position: absolute;
   overflow: hidden;
-  animation: animateLoading 3s linear 3;
+  animation: animateLoading 3s linear 2;
 }
 
 @keyframes animateLoading {
@@ -398,7 +398,7 @@ html {
   display: flex;
   flex-direction: column;
   background-color: black;
-  animation: loadingWindow 3s linear 3;
+  animation: loadingWindow 3s linear 2;
 }
 
 @keyframes loadingWindow {
