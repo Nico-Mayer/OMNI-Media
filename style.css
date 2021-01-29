@@ -355,11 +355,11 @@ html {
 }
 
 .loading {
-  color: white;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
   position: relative;
+  color: white;
 }
 
 .loading::before {
