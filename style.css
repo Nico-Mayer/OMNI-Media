@@ -3,150 +3,205 @@
   font-family: aquire-bold;
 }
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
 }
-
-/* HEADER */
-nav {
-  border-top: 1px solid #252525;
-  border-left: 1px solid #252525;
-  border-right: 1px solid #252525;
-  border-bottom: 1px solid darkgray;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-  margin-top: 0.7rem;
+/* FULL CONTAINER - containing: header,hero,text,footer*/
+.container {
+  min-height: 100vh;
+  border: 0.6rem solid #c4c4c4;
   display: flex;
-  height: 45px;
-  align-items: center;
+  flex-direction: column;
+}
+/****************************** HEADER ********************************/
+.header {
+  padding: 0.5rem;
   font-size: 2rem;
-  color: #252525;
-}
-
-.dark-mode {
-  filter: invert(1) hue-rotate(180deg);
-}
-
-.footerContainer {
-  min-height: 3%;
-  border-bottom: 1px solid #252525;
-  border-left: 1px solid #252525;
-  border-right: 1px solid #252525;
   background-color: #c4c4c4;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: center;
-  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  display: grid;
+  border: 1px solid black;
+  border-bottom: 0;
+  grid-template-columns: 15rem 1fr 15rem;
 }
-.sectionA {
-  height: 100%;
-  width: 50%;
+/****************************** HEADER COMPONENT 1 ********************************/
+.header-component1 {
   display: flex;
-  flex-direction: row;
-  flex: 1 1 30rem;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
 }
 
-.sectionB {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 1rem;
-}
-
-/* NIGHT MODE BUTTON*/
-.toggle-container {
-  background-color: white;
-  border-style: double;
-  display: flex;
-  width: 40px;
-  height: 16px;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
-}
-.toggle-container:hover {
-  box-shadow: 1px 1px #252525;
-}
-.dark-mode-btn {
-  width: 20px;
-  height: 20px;
-
+/****************************** BURGER BUTTON ********************************/
+.burger-btn {
   border-style: double;
   background-color: white;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 38px;
+  width: 38px;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.dark-mode-btn.active {
-  margin-left: 15px;
+.burger-btn:hover {
+  box-shadow: 2px 2px #252525;
 }
-
-.stripes-dark-mode-btn {
-  width: 10px;
-  height: 1px;
+.burger-btn-stripes {
+  width: 20px;
+  height: 2px;
   background: #252525;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
-.stripes-dark-mode-btn::before,
-.stripes-dark-mode-btn::after {
+.burger-btn-stripes::before,
+.burger-btn-stripes::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 1px;
+  width: 20px;
+  height: 2px;
   background: #252522;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
-.stripes-dark-mode-btn::before {
-  transform: translateY(-3px);
+.burger-btn-stripes::before {
+  transform: translateY(-5px);
 }
-.stripes-dark-mode-btn::after {
-  transform: translateY(3px);
+.burger-btn-stripes::after {
+  transform: translateY(5px);
 }
-
-/* END NIGHT MODE BUTTON */
-
-.footerSectionOne {
-}
-
-.footerSectionTwo {
-}
-
-.footerSectionThree {
+/* ANIMATION BURGER BUTTON */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
 }
 
-.headElement {
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+/****************************** BURGER BURRON END ********************************/
+
+/***************************** NAVIGATION BAR BURGER BUTTON ***************************/
+.nav-bar {
+  width: 20rem;
+  height: 20rem;
+  margin-top: 1.2rem;
   background-color: #c4c4c4;
-  width: 100%;
-  height: 52px;
+  border: 1px solid #252525;
+  padding: 3px;
   position: fixed;
-  top: 0;
-  right: 0;
-  border: 1px solid #c4c4c4;
+  top: 47px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  visibility: hidden;
+  flex-direction: column;
+}
+.open_menu {
+  position: absolute;
+  visibility: visible;
 }
 
-.buttonContainer {
-  flex-grow: 1;
-  width: 15%;
-  margin-left: 0.3rem;
+.nav-element {
+  width: 100%;
+  height: 100%;
+
+  border-right: 1px solid #252525;
+  border-left: 1px solid #252525;
+  border-top: 1px solid #252525;
+
+  display: flex;
+  padding-left: 4%;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-element.last {
+  border-bottom: 1px solid #252525;
+}
+.nav-link {
+  text-decoration: none;
+  padding-top: 7%;
+  width: 100%;
+  height: 100%;
+}
+.nav-element:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+}
+/***************************** NAVIGATION BAR BURGER BUTTON END***************************/
+
+/****************************** HEADER COMPONENT 1 END ********************************/
+
+/* OMNI HEADER LOGO incl. animation */
+.header-component2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* OMNI HEADER FONT + ANIMATION */
+.animation {
+  cursor: pointer;
+  font-family: aquire-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 2.5rem;
+}
+
+.animation h1 {
+  border-right: 7px solid #252525;
+  text-shadow: 1px 1px 2px black;
+  line-height: 40px;
+  animation: typist 2s steps(4), caret 0.8s infinite step-end;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes caret {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #252525;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@keyframes typist {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 4ch;
+  }
+}
+
+/* OMNI HEADER LOGO END*/
+
+/* SOCIAL MEDIA BUTTON in HEADER */
+.header-component3 {
+  display: flex;
 }
 
 .socialMediaHeader {
   flex-grow: 1;
-  width: 15%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -219,6 +274,7 @@ nav {
   .social-nav-bar {
     width: 45;
     height: 14rem;
+    margin-top: 1.2rem;
     background-color: #c4c4c4;
     border: 1px solid #252525;
     position: fixed;
@@ -257,253 +313,111 @@ nav {
   }
 }
 
-/* HAMBURGER MENU CONTENT */
-.nav-bar {
-  width: 20rem;
-  height: 20rem;
-  background-color: #c4c4c4;
-  border: 1px solid #252525;
-  padding: 3px;
-  position: fixed;
-  top: 53px;
-  left: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  visibility: hidden;
-  flex-direction: column;
-}
+/* SOCIAL MEDIA BUTTON in HEADER END */
 
-.open_menu {
-  position: fixed;
-  visibility: visible;
-}
+/****************************** HEADER END ********************************/
 
-.nav-element {
-  width: 100%;
-  height: 100%;
-
-  border-right: 1px solid #252525;
-  border-left: 1px solid #252525;
-  border-top: 1px solid #252525;
-
-  display: flex;
-  padding-left: 4%;
-  align-items: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-.nav-element.last {
-  border-bottom: 1px solid #252525;
-}
-.nav-link {
-  text-decoration: none;
-  padding-top: 7%;
-  width: 100%;
-  height: 100%;
-}
-.nav-element:hover {
-  background-color: darkgrey;
-  cursor: pointer;
-}
-
-/* OMNI HEADER FONT + ANIMATION */
-.animation {
-  cursor: pointer;
-  font-family: aquire-bold;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 3rem;
-  padding-bottom: 0.4rem;
-}
-
-.animation h1 {
-  border-right: 7px solid #252525;
-  text-shadow: 1px 1px 2px black;
-  line-height: 40px;
-  animation: typist 2s steps(4), caret 0.8s infinite step-end;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-@keyframes caret {
-  0% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #252525;
-  }
-  100% {
-    border-color: transparent;
-  }
-}
-@keyframes typist {
-  0% {
-    width: 0ch;
-  }
-  100% {
-    width: 4ch;
-  }
-}
-
+/* HERO */
 /* HERO IMAGE */
-.image_container {
-  background-image: url(hero.jpg);
-  margin: 0.2rem;
-  border: 0.1rem solid #252525;
 
-  height: 45%;
+.hero-img {
+  max-width: 100%;
+  height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 1px solid black;
 }
 
-.container {
-  border-left: 0.8rem solid #c4c4c4;
-  border-right: 0.8rem solid #c4c4c4;
-  border-bottom: 0.8rem solid #c4c4c4;
-  height: 150vh;
-  background-color: white;
+/* END HERO */
 
+/* TEXT - WINDOWS section*/
+
+.container1 {
+  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.sectionContainer {
-  /*border-bottom: 1px solid #252525;*/
-  border-left: 1px solid #252525;
-  border-right: 1px solid #252525;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.sectionContainer.contact {
-  background-color: #c4c4c4;
+  background-color: black;
 }
 
-.boxContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.textSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 3rem;
-  height: 100%;
-}
-
-.box1 {
-  cursor: pointer;
-  width: 13rem;
-  height: 8rem;
-  margin-top: 1rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  text-align: left;
-  border: 1px solid #252525;
-}
-.box1 h1 {
-  font-family: "IBM Plex Mono";
+.app-bar {
   font-weight: 300;
+  font-style: normal;
+  height: 4rem;
+  border-bottom: 0.3rem solid #c4c4c4;
+  background-color: #0400d8;
+  background: linear-gradient(0.25turn, #0400d8, 10%, #8180bd);
+  display: flex;
+  align-items: center;
 }
 
-/* .load {
-  color: #8b4af3;
-  position: absolute;
-  font-size: 2rem;
-} */
-
-/* .box1 {
-  width: 5rem;
-  height: 5rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  text-align: center;
-  background-color: transparent;
-  animation: moveBox1 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+.header-text-left {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-style: normal;
+  flex-grow: 1;
+  width: 20%;
+  padding-left: 2rem;
+  align-content: center;
+  color: white;
+}
+
+.header-text-middle {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 60%;
+}
+
+.header-text-right {
+  display: flex;
+  width: 20%;
+  align-content: center;
+  justify-content: flex-end;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   justify-content: center;
-} */
+}
 
-/* ++++++++++++MENU BUTTON ++++++++++++*/
+.menu-button {
+  text-align: center;
+  background-color: #c4c4c4;
+  width: 30px;
+  height: 30px;
+  margin: 0.3rem;
+  padding: 0.8rem;
+}
 
-.menu-btn {
-  /*background-color: #8b4af3;*/
-  border-style: double;
-  background-color: white;
-  padding-left: 0.6rem;
-  position: relative;
+.textField {
+  box-sizing: border-box;
+  background-color: black;
+  min-height: auto;
+  font-size: 2rem;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  /* border: 3px solid #fff; */
-}
-.menu-btn:hover {
-  box-shadow: 2px 2px #252525;
+  padding: 1rem;
+  padding-top: 3rem;
 }
 
-/* KONTAKT WINDOW */
-.contact-window {
-  position: fixed;
-  overflow: auto;
-  border: 1px solid #252525;
-  box-shadow: 1px 1px 10px 0.02px #252525;
-  top: 10%;
-  left: 15%;
-  width: 70%;
-  height: 35%;
-  background-color: white;
+.text {
+  color: white;
 }
 
-.contact-window:hover {
-  box-shadow: 1px 1px 10px 2px #252525;
-}
+/* footer */
 
-.header-contact-window {
-  border-bottom: 1px solid #252525;
-  align-items: center;
-  padding-left: 1rem;
-  position: relative;
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.5rem;
   background-color: #c4c4c4;
+}
+
+.footer div {
+  font-size: 1.5rem;
+  padding: 0.5rem;
   display: flex;
-  width: 100%;
-  height: 4rem;
-}
-
-.header-contact-window h1 {
-  font-family: "IBM Plex Mono";
-  font-weight: 400;
-}
-
-.contact-window-content {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 20px;
-  font-family: "IBM Plex Mono";
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.gif {
-  height: 90px;
+  align-items: center;
 }

@@ -1,52 +1,53 @@
 
+
 ///////////////* DARK MODE TOGGL */////////////////
 
-let darkMode = localStorage.getItem('darkMode');
-let togglActive = localStorage.getItem('togglActive');
-const darkModeBtn = document.querySelector('.dark-mode-btn');
+// let darkMode = localStorage.getItem('darkMode');
+// let togglActive = localStorage.getItem('togglActive');
+// const darkModeBtn = document.querySelector('.dark-mode-btn');
 
-const enableDarkMode = ()=>{
-  document.documentElement.classList.add('dark-mode');
-  darkModeBtn.classList.add('active');
-  localStorage.setItem('darkMode', 'enabled');
-};
-const disableDarkMode = ()=>{
-  document.documentElement.classList.remove('dark-mode');
-  darkModeBtn.classList.remove('active');
-  localStorage.setItem('darkMode', null);
-};
-if(darkMode == 'enabled'){
-  enableDarkMode();
-};
+// const enableDarkMode = ()=>{
+//   document.documentElement.classList.add('dark-mode');
+//   darkModeBtn.classList.add('active');
+//   localStorage.setItem('darkMode', 'enabled');
+// };
+// const disableDarkMode = ()=>{
+//   document.documentElement.classList.remove('dark-mode');
+//   darkModeBtn.classList.remove('active');
+//   localStorage.setItem('darkMode', null);
+// };
+// if(darkMode == 'enabled'){
+//   enableDarkMode();
+// };
 
-darkModeBtn.addEventListener('click', () => {
-  darkMode = localStorage.getItem('darkMode');
-  if(darkMode != 'enabled'){
-    enableDarkMode();
-  }
-  else{
-    disableDarkMode();
-  }
-});
+// darkModeBtn.addEventListener('click', () => {
+//   darkMode = localStorage.getItem('darkMode');
+//   if(darkMode != 'enabled'){
+//     enableDarkMode();
+//   }
+//   else{
+//     disableDarkMode();
+//   }
+// });
 
-///////////////* MENU BUTTON LINKS */////////////////
+///////////////* BURGER BUTTON */////////////////
 
-const menuBtn = document.querySelector('.menu-btn');
+const burgerBtn = document.querySelector('.burger-btn');
 let menuOpen = false;
 const navbar = document.querySelector('.nav-bar');
-menuBtn.addEventListener('click', () => {
+burgerBtn.addEventListener('click', () => {
   if(!menuOpen) {
-    menuBtn.classList.add('open');
+    burgerBtn.classList.add('open');
     navbar.classList.add('open_menu');
     menuOpen = true;
   } else {
-    menuBtn.classList.remove('open');
+    burgerBtn.classList.remove('open');
     navbar.classList.remove('open_menu');
     menuOpen = false;
   }
 });
 
-///////////////* BUTTON SOCIAL MEDIA */////////////////
+/////////////* BUTTON SOCIAL MEDIA */////////////////
 
 const socailMenuBtn = document.querySelector('.menu-btn-social-media');
 let socialNavBarOpen = false;
