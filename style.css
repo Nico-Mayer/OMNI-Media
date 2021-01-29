@@ -359,28 +359,33 @@ html {
   text-transform: uppercase;
   letter-spacing: 1rem;
   position: relative;
-  color: white;
+  color: transparent;
 }
 
 .loading::before {
   content: "loading..";
-  color: #782bf3;
+  color: transparent;
   position: absolute;
   overflow: hidden;
-  border-right: 0.4rem solid #782bf3;
-  animation: animateLoading 3s linear infinite;
+  animation: animateLoading 3s linear 3;
 }
 
 @keyframes animateLoading {
   0% {
     width: 0%;
+    color: #782bf3;
+    border-right: 0.4rem solid #782bf3;
   }
   50% {
     width: 100%;
+    color: #782bf3;
+    border-right: 0.4rem solid #782bf3;
   }
 
   100% {
     width: 0%;
+    color: #782bf3;
+    border-right: 0.4rem solid #782bf3;
   }
 }
 
