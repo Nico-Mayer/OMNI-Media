@@ -20,6 +20,10 @@ html {
   flex-direction: column;
   border-top: 0px;
 }
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 /****************************** HEADER ********************************/
 
 .head-wrapper {
@@ -153,7 +157,7 @@ html {
   background-color: darkgrey;
   cursor: pointer;
 }
-/***************************** NAVIGATION BAR BURGER BUTTON END***************************/
+/***************************** NAVIGATION BAR BURGER BUTTON END ***************************/
 
 /****************************** HEADER COMPONENT 1 END ********************************/
 
@@ -297,7 +301,7 @@ html {
     border: 1px solid #252525;
     position: fixed;
     top: 53px;
-    right: 10px;
+    right: 0.9rem;
     visibility: hidden;
   }
   .social-nav-bar img {
@@ -337,15 +341,25 @@ html {
 
 /****************************** HEADER END ********************************/
 
+/****************************** CONTENT DER SEITE ********************************/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c4c4c4;
+  min-height: 100vh;
+  border: 1px solid black;
+  border-top: 0;
+  padding: 0.2rem;
+}
 /* HERO IMAGE */
-/* .hero-img {
+.hero-img {
   max-width: 100%;
   height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid black; */
-/* } */
+}
 
 .loading-div {
   height: 25vh;
@@ -392,7 +406,6 @@ html {
 /* END HERO */
 
 /* TEXT - WINDOWS section*/
-
 .container1 {
   min-height: 100vh;
   display: flex;
@@ -457,7 +470,7 @@ html {
 
 .menu-button {
   text-align: center;
-  background-color: #c4c4c4;
+  background-color: white;
   width: 30px;
   height: 30px;
   margin: 0.3rem;
@@ -479,6 +492,47 @@ html {
   color: white;
 }
 
+/* KONTAKT WINDOW NUR IM KONTAKT HTML */
+.contact-window {
+  border: 1px solid #252525;
+  box-shadow: 1px 1px 10px 0.02px #252525;
+  margin-top: 5rem;
+  width: 40%;
+  min-height: 15rem;
+  background-color: white;
+}
+
+.contact-window:hover {
+  box-shadow: 1px 1px 10px 2px #252525;
+}
+
+.header-contact-window {
+  border-bottom: 1px solid #252525;
+  align-items: center;
+  padding-left: 1rem;
+  background-color: #c4c4c4;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+}
+
+.header-contact-window h1 {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+}
+
+.contact-window-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  font-family: "IBM Plex Mono";
+  font-size: 15px;
+  font-weight: 400;
+}
+/* KONTAKT WINDOW NUR IM KONTAKT HTML END */
+
+/****************************** CONTENT DER SEITE ENDE ********************************/
+
 /* footer */
 
 .footer {
@@ -490,7 +544,62 @@ html {
 
 .footer div {
   font-size: 1.5rem;
-  padding: 0.5rem;
   display: flex;
   align-items: center;
 }
+/* FOOTER COMPONENT 4 */
+.footer-component4 {
+  justify-content: flex-end;
+  align-content: center;
+  padding-bottom: 0.8rem;
+}
+
+/* NIGHT MODE BUTTON*/
+.toggle-container {
+  justify-content: flex-start;
+  background-color: white;
+  border-style: double;
+  width: 40px;
+  height: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.toggle-container:hover {
+  box-shadow: 1px 1px #252525;
+}
+.dark-mode-btn {
+  width: 20px;
+  height: 20px;
+
+  border-style: double;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.dark-mode-btn.active {
+  margin-left: 15px;
+}
+
+.stripes-dark-mode-btn {
+  width: 10px;
+  height: 1px;
+  background: #252525;
+}
+.stripes-dark-mode-btn::before,
+.stripes-dark-mode-btn::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: #252522;
+}
+.stripes-dark-mode-btn::before {
+  transform: translateY(-3px);
+}
+.stripes-dark-mode-btn::after {
+  transform: translateY(3px);
+}
+/* END NIGHT MODE BUTTON */
