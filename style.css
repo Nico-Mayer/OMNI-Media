@@ -355,9 +355,9 @@ html {
 }
 /* HERO IMAGE */
 .hero-img {
-  background-image: url(hero.jpg);
+  background-image: url(hero2.gif);
   min-width: 100%;
-  height: 60vh;
+  height: 100vh;
 
   background-position: center;
   background-repeat: no-repeat;
