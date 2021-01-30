@@ -45,7 +45,7 @@ html {
   border-right: 1px solid black;
   border-top: 1px solid black;
   border-bottom: 1px solid #252525;
-  grid-template-columns: 15rem 1fr 15rem;
+  grid-template-columns: 20% 60% 20%;
 }
 /****************************** HEADER COMPONENT 1 ********************************/
 .header-component1 {
